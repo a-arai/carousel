@@ -1,0 +1,30 @@
+<!doctype>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Carousel</title>
+</head>
+<body>
+<header>
+		<h1><span class="fa fa-wrench"></span>Carousel sample</h1>
+</header>
+<div class="caption">インジケーター付きのカルーセルです。<br />インジケーター部分はjsで動的に作成しているので、画像枚数が増減しても問題ありません。<br />画像が一枚の時はインジケーターが消え、左右のボタンも非表示になります。</div>
+<div class="carouselWrapper">
+	<div class="carousel">
+		<ul class="container cf">
+			<li><a href="#"><img src="img/sample1.png" height="328"/></a></li>
+			<li><a href="#"><img src="http://dummyimage.com/524x328/68c1c7/ffffff&text=サンプル2" /></a></li>
+			<li><a href="#"><img src="http://dummyimage.com/524x328/3d71d3/ffffff&text=サンプル3" /></a></li>
+			<li><a href="#"><img src="http://dummyimage.com/524x328/8469c7/ffffff&text=サンプル4" /></a></li>
+		</ul>
+	</div>
+	<div>
+		<span id="jsiLeft" class="leftBtn">左へ</span>
+		<span id="jsiRight" class="rightBtn">右へ</span>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/carousel.js"></script>
+</body>
+</html>
