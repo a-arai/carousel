@@ -1,7 +1,7 @@
 var A_ARAI = A_ARAI || {};
 A_ARAI.SAMPLE = {};
 
-A_ARAI.SAMPLE.CAROUSEL = function($carouselWrap, $slideContents, $left, $right){
+A_ARAI.SAMPLE.Carousel = function($carouselWrap, $slideContents, $left, $right){
   this.$carouselWrap = $carouselWrap;
   this.$slideContents = $slideContents;
   this.$left = $left;
@@ -9,7 +9,7 @@ A_ARAI.SAMPLE.CAROUSEL = function($carouselWrap, $slideContents, $left, $right){
 
   this.init();
 };
-A_ARAI.SAMPLE.CAROUSEL.prototype = {
+A_ARAI.SAMPLE.Carousel.prototype = {
   SLIDE_TIME : 300,
 
   init: function() {
@@ -101,5 +101,5 @@ A_ARAI.SAMPLE.CAROUSEL.prototype = {
 };
 
 $(window).on('load', function(){
-  new A_ARAI.SAMPLE.CAROUSEL($('.carouselWrapper'), $('.container').find('li'), $('#jsiLeft'), $('#jsiRight'));
+  new A_ARAI.SAMPLE.Carousel($('.carouselWrapper'), $('.container').find('li'), $('#jsiLeft'), $('#jsiRight'));
 });
