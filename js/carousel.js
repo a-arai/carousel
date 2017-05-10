@@ -18,7 +18,7 @@ A_ARAI.SAMPLE.Carousel.prototype = {
     this.insertImg();
     this.bindEvent();
   },
-  setParameters : function(){
+  setParameters: function(){
     this.$container = $('.container');
     this.imgWidth = this.$slideContents.width();
     this.imgLength = this.$slideContents.length;
@@ -46,13 +46,13 @@ A_ARAI.SAMPLE.Carousel.prototype = {
       _self.moveToNav($(this));
     });
   },
-  moveToLeft : function(){
+  moveToLeft: function(){
     this.moveContainer(-this.imgWidth, 'left');
   },
-  moveToRight : function(){
+  moveToRight: function(){
     this.moveContainer(this.imgWidth, 'right');
   },
-  moveToNav : function($this) {
+  moveToNav: function($this) {
     if ( this.$container.is(':animated') ) {
       return;
     }
@@ -61,21 +61,21 @@ A_ARAI.SAMPLE.Carousel.prototype = {
     $this.addClass('curNav');
     this.$container.animate({'left': -(navIndex * this.imgWidth)}, this.SLIDE_TIME);
   },
-  removeCurClass : function () {
+  removeCurClass: function () {
     this.$slideContents.removeClass('cur');
     this.$navBtn.removeClass('curNav');
   },
-  addCurClass :function(TARGETINDEX) {
+  addCurClass: function(TARGETINDEX) {
     this.$slideContents.eq(TARGETINDEX).addClass('cur');
     this.$navBtn.eq(TARGETINDEX).addClass('curNav');
   },
-  getCurrentImgIndex :function(offset) {
+  getCurrentImgIndex: function(offset) {
     this.removeCurClass();
     var index = Math.abs((this.containerPosition + offset) / this.imgWidth);
 
     this.setClass(index);
   },
-  setClass : function(INDEX) {
+  setClass: function(INDEX) {
     if(this.imgLength  > INDEX) {
       this.addCurClass(INDEX);
     } else {
